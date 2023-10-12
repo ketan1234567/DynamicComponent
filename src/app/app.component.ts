@@ -1,10 +1,18 @@
+// app.component.ts
 import { Component } from '@angular/core';
+
+import { AlertDialogService } from './alert-dailog/alert-dialog.service';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `
+    <button (click)="openAlertDialog()">Open Alert Dialog</button>
+  `
 })
 export class AppComponent {
-  title = 'DynamicComponent';
+  constructor(private dynamicComponentService:AlertDialogService) {}
+
+  openAlertDialog() {
+    this.dynamicComponentService.openAlertDialog('Alert', 'This is a dynamic alert dialog.');
+  }
 }
