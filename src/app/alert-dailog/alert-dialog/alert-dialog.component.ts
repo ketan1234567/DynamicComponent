@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-alert-dialog',
   template: `
-    <div class="alert-dialog">
+    <div class="card">
       <h1>{{ title }}</h1>
       <p>{{ message }}</p>
       <button (click)="close()">Close</button>

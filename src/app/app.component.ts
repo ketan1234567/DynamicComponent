@@ -14,5 +14,6 @@ export class AppComponent {
 
   openAlertDialog() {
     this.dynamicComponentService.openAlertDialog('Alert', 'This is a dynamic alert dialog.');
+  
   }
 }
